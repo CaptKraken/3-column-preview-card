@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [This Github](https://github.com/CaptKraken/3-column-preview-card)
+- Live Site URL: [3 Column Preview Card](https://captkraken.github.io/3-column-preview-card/)
 
 ## My process
 
