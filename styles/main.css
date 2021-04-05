@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  font-size: 15px;
+  background-color: #f2f2f2;
+  font-family: "Lexend Deca", sans-serif;
+  color: #f2f2f2;
+  height: 100%;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+p {
+  margin-bottom: auto;
+}
+
+a {
+  margin-top: auto;
+  color: currentColor;
+}
+
+.container {
+  max-width: 56.75rem;
+}
+
+.container-container {
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 5rem;
+  -webkit-box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
+  z-index: 5;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card {
+  padding: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.card__icon {
+  width: 4rem;
+  height: 4rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-bottom: 1.5rem;
+}
+
+.card__title {
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  letter-spacing: 2px;
+}
+
+.card__description {
+  line-height: 1.7;
+  opacity: 0.7;
+}
+
+.card__btn {
+  text-align: center;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 4rem;
+  background-color: #f2f2f2;
+  padding: 1rem 2rem;
+  border: 2px solid currentColor;
+  border-radius: 5rem;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.card--sedan {
+  background: #e38826;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.card--sedan .card__btn {
+  color: #e38826;
+}
+
+.card--suv {
+  background: #006970;
+}
+
+.card--suv .card__btn {
+  color: #006970;
+}
+
+.card--luxury {
+  background: #004241;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card--luxury .card__btn {
+  color: #004241;
+}
+
+.card--sedan .card__btn:hover,
+.card--suv .card__btn:hover,
+.card--luxury .card__btn:hover {
+  background-color: transparent;
+  color: #f2f2f2;
+}
+
+@media only screen and (max-width: 67.5rem) {
+  body {
+    max-height: unset;
+    min-height: 100%;
+    padding: 2rem;
+  }
+  .container-container {
+    background-color: unset;
+    padding: unset;
+    -webkit-box-shadow: unset;
+            box-shadow: unset;
+  }
+}
+
+@media only screen and (max-width: 53.125rem) {
+  html {
+    height: unset;
+  }
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .card {
+    padding: 2rem;
+  }
+  .card--sedan {
+    border-bottom-left-radius: unset;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .card--luxury {
+    border-top-right-radius: unset;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+}
+
+@media only screen and (max-width: 20rem) {
+  body {
+    padding: 0 0 2rem 0;
+  }
+  .card--sedan {
+    border-top-left-radius: unset;
+    border-top-right-radius: unset;
+  }
+  .card--luxury {
+    border-bottom-left-radius: unset;
+    border-bottom-right-radius: unset;
+  }
+}
+/*# sourceMappingURL=main.css.map */

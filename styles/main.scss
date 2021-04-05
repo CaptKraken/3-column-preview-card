@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+// COLORS
+
+$clr-bright-orange: hsl(31, 77%, 52%);
+$clr-dark-cyan: hsl(184, 100%, 22%);
+$clr-very-dark-cyan: hsl(179, 100%, 13%);
+
+// paragraphs
+$clr-transparent-white: hsla(0, 0%, 100%, 0.75);
+// background, headings, buttons
+$clr-very-light-grey: hsl(0, 0%, 95%);
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  font-size: 15px;
+  background-color: $clr-very-light-grey;
+  font-family: "Lexend Deca", sans-serif;
+  color: $clr-very-light-grey;
+  height: 100%;
+  padding: 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+//keep the card__btn at the bottom of the card
+// https://stackoverflow.com/questions/31000885/align-an-element-to-bottom-with-flexbox
+p {
+  margin-bottom: auto;
+}
+a {
+  margin-top: auto;
+  color: currentColor;
+}
+
+.container {
+  // 56.25 900px
+  // 56.75 908px
+  max-width: 56.75rem;
+}
+.container-container {
+  background-color: $clr-transparent-white;
+  padding: 5rem;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
+  z-index: 5;
+}
+
+.flex {
+  display: flex;
+}
+.card {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+
+  &__icon {
+    width: 4rem;
+    height: 4rem;
+    object-fit: contain;
+    margin-bottom: 1.5rem;
+  }
+
+  &__title {
+    font-family: "Big Shoulders Display", cursive;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+  }
+
+  &__description {
+    line-height: 1.7;
+    opacity: 0.7;
+  }
+
+  &__btn {
+    text-align: center;
+    align-self: flex-start;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 4rem;
+    background-color: $clr-very-light-grey;
+    padding: 1rem 2rem;
+    border: 2px solid currentColor;
+    border-radius: 5rem;
+    transition: all 0.25s;
+  }
+
+  &--sedan {
+    background: $clr-bright-orange;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+  &--sedan &__btn {
+    color: $clr-bright-orange;
+  }
+  &--suv {
+    background: $clr-dark-cyan;
+  }
+  &--suv &__btn {
+    color: $clr-dark-cyan;
+  }
+  &--luxury {
+    background: $clr-very-dark-cyan;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  &--luxury &__btn {
+    color: $clr-very-dark-cyan;
+  }
+
+  &--sedan &__btn,
+  &--suv &__btn,
+  &--luxury &__btn {
+    &:hover {
+      background-color: transparent;
+      color: $clr-very-light-grey;
+    }
+  }
+}
+
+// media queries
+// 1080px
+@media only screen and (max-width: 67.5rem) {
+  body {
+    max-height: unset;
+    min-height: 100%;
+
+    padding: 2rem;
+  }
+  .container-container {
+    background-color: unset;
+    padding: unset;
+    box-shadow: unset;
+  }
+}
+
+//950px
+@media only screen and (max-width: 53.125rem) {
+  html {
+    height: unset;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .card {
+    padding: 2rem;
+    &--sedan {
+      border-bottom-left-radius: unset;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+
+    &--luxury {
+      border-top-right-radius: unset;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+  }
+}
+
+@media only screen and (max-width: 20rem) {
+  body {
+    padding: 0 0 2rem 0;
+  }
+  .card {
+    &--sedan {
+      border-top-left-radius: unset;
+      border-top-right-radius: unset;
+    }
+
+    &--luxury {
+      border-bottom-left-radius: unset;
+      border-bottom-right-radius: unset;
+    }
+  }
+}
